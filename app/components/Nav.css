@@ -1,5 +1,12 @@
 nav {
-  height: calc(1rem * 3);
+  background: white;
   margin-bottom: 1rem;
+  padding: 1rem;
+  font-family: system-ui;
+  display: flex;
+  justify-content: space-between;
+}
+.nav__logo, .nav__buttons, .nav__social {
   background: gray;
+  display: block;
 }

@@ -10,23 +10,23 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.4.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.1",
-    "postcss-loader": "^2.0.5",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-hot-loader": "^3.0.0-beta.7",
-    "style-loader": "^0.17.0",
-    "webpack": "^2.5.1"
-  },
-  "devDependencies": {
     "extract-text-webpack-plugin": "^2.1.0",
     "html-webpack-plugin": "^2.28.0",
     "postcss-cssnext": "^2.11.0",
+    "postcss-loader": "^2.0.5",
     "postcss-short": "^3.0.3",
+    "react-hot-loader": "^3.0.0-beta.7",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"
   }
 }

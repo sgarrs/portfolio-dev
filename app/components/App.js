@@ -9,12 +9,16 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      viewport: {
+        /* innerHeight seems to be too big? this solution is janky as fuck */
+        height: window.innerHeight - 18 + 'px'
+      }
     }
   }
 
   render() {
     return (
-      <div className='container'>
+      <div className='container' style={this.state.viewport}>
         <div className='viewport--left'>
           <Nav />
           <Article />
