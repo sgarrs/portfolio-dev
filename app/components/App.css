@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh;
+}
+.viewport--left, .viewport--right {
+  width: 50%;
+  margin: 1rem;
+  height: 100%;
+}
+.viewport--left {
+  display: flex;
+  flex-direction: column;
+}

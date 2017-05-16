@@ -1,0 +1,6 @@
+.gallery {
+  height: 100%;
+  background: gray;
+  overflow: scroll;
+  overflow-y: auto;
+}
