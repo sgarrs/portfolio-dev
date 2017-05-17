@@ -1,0 +1,30 @@
+:root {
+  --ff__sans-serif: {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  --ff__serif: {
+    font-family: 'Merriweather', serif;
+  }
+  --ot__global: {
+    font-kerning: normal;
+    font-variant-ligatures: common-ligatures contextual;
+    font-feature-settings: "kern", "liga", "clig", "calt";
+  }
+  --ot__roman: {
+    font-variant-ligatures: common-ligatures contextual;
+    font-variant-numeric: oldstyle-nums propotional-nums;
+    font-feature-settings: "kern", "liga", "clig", "calt", "onum", "pnum";
+  }
+  --font__display: {
+    font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
+    font-feature-settings: "kern", "liga", "clig", "calt", "dlig";
+  }
+  --font__data: {
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "tnum";
+  }
+  --nav__item: {
+    @apply --ff__sans-serif;
+    @apply --ot__global;
+  }
+}
