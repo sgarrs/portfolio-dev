@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "fontfaceobserver": "^2.0.9",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "source-sans-pro": "git://github.com/adobe-fonts/source-sans-pro.git#release",
