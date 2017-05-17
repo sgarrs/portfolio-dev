@@ -2,10 +2,12 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 
 import { AppContainer } from 'react-hot-loader';
-
+import loadFonts from './utils/loadFonts';
 import App from './components/App';
 
 import './index.css';
+
+loadFonts();
 
 const render = (Component) => {
   ReactDOM.render(

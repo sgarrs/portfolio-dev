@@ -1,15 +1,10 @@
-@font-face {
-  font-family: 'Source Sans Pro';
-  src: url('../node_modules/source-sans-pro/WOFF2/OTF/SourceSansPro-Regular.otf.woff2') format('woff2'),
-    url('../node_modules/source-sans-pro/WOFF/OTF/SourceSansPro-Regular.otf.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Source Sans Pro';
-  src: url('../node_modules/source-sans-pro/WOFF2/OTF/SourceSansPro-It.otf.woff2') format('woff2'),
-    url('../node_modules/source-sans-pro/WOFF/OTF/SourceSansPro-It.otf.woff') format('woff');
-  font-weight: 400;
-  font-style: italic;
+@import 'styles/font-face';
+@import 'styles/variables';
+
+body {
+  font-family: sans-serif;
 }
 
+html.fonts--loaded body {
+  @apply --ff__source-sans;
+}
