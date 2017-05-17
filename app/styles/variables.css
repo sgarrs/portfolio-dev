@@ -1,5 +1,41 @@
+/*  - build style components that will apply to react components
+    > style components
+      - typography
+      - sizing
+      - shadow
+      - colors
+*/
+
 :root {
-  --ff__source-sans: {
+
+  /* font-family */
+  --ff__sans-serif: {
     font-family: 'Source Sans Pro';
+  }
+
+  /* opentype */
+  --ot__global: {     /* for all unspecified text */
+    font-kerning: normal;
+    font-variant-ligatures: common-ligatures contextual;
+    font-feature-settings: "kern", "liga", "clig", "calt";
+  }
+  --ot__roman: {      /* for paragraphs text */
+    font-variant-ligatures: common-ligatures contextual;
+    font-variant-numeric: oldstyle-nums propotional-nums;
+    font-feature-settings: "kern", "liga", "clig", "calt", "onum", "pnum";
+  }
+  --ot__display: {  /* for display text */
+    font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
+    font-feature-settings: "kern", "liga", "clig", "calt", "dlig";
+  }
+  --ot__data: {     /* for text showing data in tables */
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "tnum";
+  }
+
+  /* react component */
+  --nav__item: {
+    @apply --ff__sans-serif;
+    @apply --ot__global;
   }
 }
