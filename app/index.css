@@ -1,10 +1,8 @@
 @import 'styles/font-face';
-@import 'styles/variables';
 
 body {
   font-family: sans-serif;
 }
 
 html.fonts--loaded body {
-  @apply --ff__source-sans;
 }
