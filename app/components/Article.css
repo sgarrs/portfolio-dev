@@ -1,11 +1,7 @@
+@import '../styles/variables';
+
 .article {
-  background: white;
-  overflow: scroll;
-  overflow-y: auto;
-  font-family: system-ui;
-  line-height: 1.4;
-  padding: 1rem 4rem 1rem 1rem;
-  text-align: justify;
+  @apply --article;
 
   & p:last-child {
     margin-bottom: 0;

@@ -5,6 +5,7 @@ import { AppContainer } from 'react-hot-loader';
 import loadFonts from './utils/loadFonts';
 import App from './components/App';
 
+import 'normalize.css';
 import './index.css';
 
 loadFonts();

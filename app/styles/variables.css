@@ -1,12 +1,22 @@
 /*  - build style components that will apply to react components
     > style components
       - typography
+        * media queries
+          - device sizes
+          - landscape vs portrait
       - sizing
-      - shadow
+        * typography based sizing
+        * modular scale
+        * spacing units
+      - layers
+        * material design-based box-shadows
+        * z-index
       - colors
 */
 
 :root {
+
+  /** TYPOGRAPHY **/
 
   /* font-family */
   --ff__sans-serif: {
@@ -33,9 +43,48 @@
     font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "tnum";
   }
 
-  /* react component */
-  --nav__item: {
-    @apply --ff__sans-serif;
+  /** SIZING **/
+
+  /* font-size */
+  --fs__base: {     /* apply to body to set rem basis */
+    font-size: 16px;
+  }
+  --fs__global: {
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  /** COMPONENTS **/
+
+  /* nav */
+
+  --nav {
+    background: white;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-family: system-ui;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  --nav__item {
+    background: gray;
+    @apply --fs__global;
     @apply --ot__global;
+  }
+
+  /* article */
+
+  --article {
+    @apply --ff__sans-serif;
+    @apply --ot__roman;
+    @apply --fs__global;
+
+    background: white;
+    overflow: scroll;
+    overflow-y: auto;
+    line-height: 1.4;
+    padding: 1rem 4rem 1rem 1rem;
+    text-align: justify;
   }
 }

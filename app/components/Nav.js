@@ -5,9 +5,9 @@ class Nav extends React.Component {
   render() {
     return (
       <nav className='nav'>
-        <div className='nav__logo'>Logo</div>
-        <div className='nav__buttons'>Buttons</div>
-        <div className='nav__social'>Social</div>
+        <div className='nav__item logo'>Logo</div>
+        <div className='nav__item buttons'>Buttons</div>
+        <div className='nav__item social'>Social</div>
       </nav>
     )
   }

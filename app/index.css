@@ -1,8 +1,14 @@
-@import 'styles/font-face';
+@import './styles/font-face';
+@import './styles/variables';
 
 body {
   font-family: sans-serif;
+  @apply --fs__base;
 }
 
 html.fonts--loaded body {
+  @apply --ff__sans-serif;
+  @apply --ot__global;
 }
+
+
