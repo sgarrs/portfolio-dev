@@ -1,0 +1,8 @@
+@import 'styles/font-face';
+
+body {
+  font-family: sans-serif;
+}
+
+html.fonts--loaded body {
+}

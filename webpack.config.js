@@ -43,33 +43,49 @@ module.exports = {
 
   module: {
     rules: [
-    /* CSS */
-    {
-      test: /\.css$/,
-      use: [
-        'style-loader',
-        { loader: 'css-loader?modules', options: { importLoaders: 1 } },
-        {
-          loader: 'postcss-loader',
-          options: {
-            config: {
-              path: './postcss.config.js'
+
+      /* CSS */
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          { loader: 'css-loader?modules', options: { importLoaders: 1 } },
+          {
+            loader: 'postcss-loader',
+            options: {
+              config: {
+                path: './postcss.config.js'
+              }
             }
           }
+        ]
+      },
+
+      /* JS */
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            babelrc: true
+          }
         }
-      ]
-    },
-    /* JS */
-    {
-      test: /\.js$/,
-      exclude: /node_modules/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          babelrc: true
-        }
-      }
-    }
+      },
+
+      /* Files */
+      {
+        test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url-loader?limit=10000&mimetype=application/font-woff'
+      },
+      {
+        test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url-loader?limit=10000&mimetype=application/font-woff'
+      },
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
+      },
     ]
   },
   plugins: [
