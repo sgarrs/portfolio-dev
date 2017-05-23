@@ -1,9 +1,25 @@
 @import '../styles/variables';
 
 .article {
-  @apply --article;
+  @apply --dp__6;
+  background: var(--white);
+  flex-grow: 1;
+  overflow: scroll;
+  margin: * * 1.5em *;
+  padding: 1em 4em 1em 1em;
 
+
+  & .article__header {
+    @mixin font-settings normal, 700, 2em, 1;
+    @apply --ot__display;
+  }
+  & .article__p {
+    @mixin font-settings normal, 400, 1em, 1.4;
+    @apply --ot__roman;
+    text-align: justify;
+    word-break: break-all;
+  }
   & p:last-child {
-    margin-bottom: 0;
+    margin: * * 0 *;
   }
 }

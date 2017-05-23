@@ -11,17 +11,17 @@ class App extends React.Component {
     this.state = {
       viewport: {
         /* innerHeight seems to be too big? this solution is janky as fuck */
-        height: window.innerHeight - 18 + 'px'
+        height: window.innerHeight - 16 + 'px'
       }
     }
   }
 
   render() {
     return (
-      <div className='container' style={this.state.viewport}>
+      <div className='container'>
         <div className='viewport--left'>
-          <Nav />
-          <Article />
+            <Nav />
+            <Article />
         </div>
         <div className='viewport--right'>
           <Gallery />

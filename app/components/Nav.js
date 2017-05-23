@@ -5,9 +5,11 @@ class Nav extends React.Component {
   render() {
     return (
       <nav className='nav'>
-        <div className='nav__item logo'>Logo</div>
-        <div className='nav__item buttons'>Buttons</div>
-        <div className='nav__item social'>Social</div>
+        <ul>
+          <li className='nav__item logo'>Logo</li>
+          <li className='nav__item menu'>Menu</li>
+          <li className='nav__item social'>Social</li>
+        </ul>
       </nav>
     )
   }

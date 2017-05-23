@@ -1,9 +1,29 @@
 @import '../styles/variables';
 
 .nav {
-  @apply --nav;
+  @apply --dp__12;
+  background: var(--white);
+  width: 100%;
+  margin: * * 1em *;
+  position: relative;
+  z-index: 3;
+
+  & ul {
+    @mixin flex;
+  }
 }
 
 .nav__item {
-  @apply --nav__item;
+  @mixin font-settings normal, 600, 2em, 1.4;
+  @apply --ot__global;
+}
+
+.logo {
+  flex-grow: 0;
+}
+.menu {
+  flex-grow: 2;
+}
+.social {
+  flex-grow: 1;
 }
