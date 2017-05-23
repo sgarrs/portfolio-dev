@@ -1,12 +1,29 @@
-nav {
-  background: white;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  font-family: system-ui;
-  display: flex;
-  justify-content: space-between;
+@import '../styles/variables';
+
+.nav {
+  @apply --dp__12;
+  background: var(--white);
+  width: 100%;
+  margin: * * 1em *;
+  position: relative;
+  z-index: 3;
+
+  & ul {
+    @mixin flex;
+  }
 }
-.nav__logo, .nav__buttons, .nav__social {
-  background: gray;
-  display: block;
+
+.nav__item {
+  @mixin font-settings normal, 600, 2em, 1.4;
+  @apply --ot__global;
+}
+
+.logo {
+  flex-grow: 0;
+}
+.menu {
+  flex-grow: 2;
+}
+.social {
+  flex-grow: 1;
 }

@@ -1,0 +1,110 @@
+/*  - build style components that will apply to react components
+    > style components
+      - typography
+        * media queries
+          - device sizes
+          - landscape vs portrait
+      - sizing
+        * typography based sizing
+        * modular scale
+        * spacing units
+      - layers
+        * material design-based box-shadows
+        * z-index
+      - colors
+
+Elevation:
+* - - - - - - - - - - - - - - *
+3 - -  .nav               - - *
+2 - -  .viewport--right - - - *
+1 - -  .viewport--left  - - - *
+0 - -  .container       - - - *
+* - - - - - - - - - - - - - - *
+*/
+
+:root {
+
+  /** COLORS **/
+
+  --white: hsla(0, 0%, 100%, 1);
+  --gray--60: hsla(0,0%, 60%, 1);
+  --black: hsla(0, 0%, 0%, 1);
+
+  /** TYPOGRAPHY **/
+
+  /* font-family */
+  --ff__sans-serif: 'Source Sans Pro';
+
+  /* opentype */
+  --ot__global: {     /* for all unspecified text */
+    font-kerning: normal;
+    font-variant-ligatures: common-ligatures contextual;
+    font-feature-settings: "kern", "liga", "clig", "calt";
+  }
+  --ot__roman: {      /* for paragraphs text */
+    font-kerning: normal;
+    font-variant-ligatures: common-ligatures contextual;
+    font-variant-numeric: oldstyle-nums propotional-nums;
+    font-feature-settings: "kern", "liga", "clig", "calt", "onum", "pnum";
+  }
+  --ot__display: {  /* for display text */
+    font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
+    font-feature-settings: "kern", "liga", "clig", "calt", "dlig";
+  }
+  --ot__data: {     /* for text showing data in tables */
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "tnum";
+  }
+
+  /** SIZING **/
+
+  /* font-size */
+  --fs__base: {     /* apply to body to set rem basis */
+    font-size: 16px;
+  }
+  --fs__global: {
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  --p__line-length: {
+    width: 65ch;
+  }
+  --header__line-length: {
+    width: 24ch;
+  }
+
+  /** SHADOWS **/
+
+  --dp__2: {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+  --dp__4: {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+  --dp__6: {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  --dp__12: {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  --dp__16: {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
+
+}
+
+/** MIXINS **/
+
+@define-mixin flex $flex-direction: row, $justify-content: space-between {
+  display: flex;
+  justify-content: $justify-content;
+  flex-direction: $flex-direction;
+}
+
+@define-mixin font-settings $font-style, $font-weight, $font-size, $line-height {
+  font-style: $font-style;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+}
