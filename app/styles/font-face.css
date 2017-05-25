@@ -1,3 +1,4 @@
+/** SOURCE SANS PRO **/
 
 /* Extra Light */
 
@@ -100,3 +101,16 @@
   font-weight: 900;
   font-style: italic;
 }
+
+/** MATERIAL DESIGN ICONS **/
+
+/*
+  @font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../git_repos/material-design-icons/iconfont/MaterialIcons-Regular.eot');
+  src: url('../git_repos/material-design-icons/iconfont/MaterialIcons-Regular.woff2') format('woff2'),
+    url('../git_repos/material-design-icons/iconfont/MaterialIcons-Regular.woff') format('woff');
+}
+*/
