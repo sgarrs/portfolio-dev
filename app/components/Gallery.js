@@ -6,7 +6,7 @@ function Images(props) {
     <ul>
       {props.src.map(function(s, index) {
         return (
-          <li key={index}>
+          <li className='gallery__item' key={index}>
             <figure>
               <img src={s} alt={props.alt[index]}/>
               { props.alt[index] ? <figcaption>{props.alt[index]}</figcaption> : null }

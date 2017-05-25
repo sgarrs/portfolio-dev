@@ -1,12 +1,70 @@
-nav {
-  background: white;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  font-family: system-ui;
-  display: flex;
-  justify-content: space-between;
+@import '../styles/variables';
+
+.nav {
+  @apply --dp__12;
+  background: var(--white);
+  width: 100%;
+  margin: * * 1em *;
+  position: relative;
+  z-index: 3;
+
+  & ul {
+    @mixin flex;
+  }
 }
-.nav__logo, .nav__buttons, .nav__social {
-  background: gray;
-  display: block;
+
+.nav__item {
+  @apply --ot__global;
+  padding: .5em;
+  border-right: 1px solid black;
+  color: var(--gray--40);
+  transition: all .2s ease-in-out;
+}
+.nav__item:hover {
+  @apply --dp__12;
+}
+.nav__item > i:hover, .nav__navigation > i:hover {
+  color: var(--black);
+  cursor: pointer;
+}
+.nav__item:last-child {
+  border-right: none;
+}
+
+.logo {
+  flex-grow: 0;
+  @mixin font-settings normal, 300, 1em, 2;
+}
+.projects {
+  flex-grow: 0;
+  @mixin font-settings normal, 300, 1.5em, 1;
+}
+.menu {
+  flex-grow: 2;
+  @mixin flex;
+  @mixin font-settings normal, 300, 1.5em, 1;
+
+  & .nav__navigation {
+    @mixin flex;
+
+    & .fa-chevron-left {
+      padding: * .5em * *;
+    }
+    & .fa-chevron-right {
+      padding: * .5em * .5em;
+    }
+    .project--next {
+      border-left: 1px solid black;
+      @mixin font-settings italic, 300, .8em, 1.2;
+      padding: * * * .5em;
+    }
+
+  }
+}
+.social {
+  flex-grow: 1;
+  @mixin font-settings normal, 300, 1.3em, 1.4;
+  & i {
+    padding: * .3em;
+  }
 }
