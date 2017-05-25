@@ -28,6 +28,7 @@ Elevation:
 
   --white: hsla(0, 0%, 100%, 1);
   --gray--60: hsla(0,0%, 60%, 1);
+  --gray--40: hsla(0,0%, 40%, 1);
   --black: hsla(0, 0%, 0%, 1);
 
   /** TYPOGRAPHY **/
