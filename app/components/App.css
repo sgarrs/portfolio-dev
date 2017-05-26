@@ -10,7 +10,7 @@
 }
 
 body {
-  background: var(--gray--60);
+  background: var(--green--60);
   color: var(--black);
 }
 .container {

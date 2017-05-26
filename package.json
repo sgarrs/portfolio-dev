@@ -13,6 +13,7 @@
     "font-awesome": "^4.7.0",
     "fontfaceobserver": "^2.0.9",
     "normalize.css": "^7.0.0",
+    "perfect-scrollbar": "^0.7.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "source-sans-pro": "git://github.com/adobe-fonts/source-sans-pro.git#release",

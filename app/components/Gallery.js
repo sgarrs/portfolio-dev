@@ -1,5 +1,7 @@
 import React from 'react';
 import './Gallery.css';
+import '../styles/scrollbar.css';
+import PS from 'perfect-scrollbar';
 
 function Images(props) {
   return (
@@ -34,9 +36,14 @@ class Gallery extends React.Component {
       ]
     }
   }
+  componentDidMount() {
+    var gallery = document.getElementById('gallery');
+    PS.initialize(gallery, {
+    });
+  }
   render() {
     return (
-      <div className='gallery'>
+      <div className='gallery' id='gallery'>
         <Images src={this.state.src} alt={this.state.alt} />
       </div>
     )
