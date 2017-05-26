@@ -3,6 +3,7 @@
 .gallery {
   overflow: scroll;
   height: 100%;
+  position: relative;
 }
 .gallery__item {
   @apply --dp__6;
