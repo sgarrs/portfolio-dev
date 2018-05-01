@@ -1,24 +1,33 @@
 @import '../styles/variables';
 
 .gallery {
+  @apply --dp__4;
   overflow: scroll;
+  margin: * * 1.5em *;
   height: 100%;
   position: relative;
+
+  & .gallery__item:last-child {
+    margin: * * 0 *;
+  }
 }
+
 .gallery__item {
-  @apply --dp__6;
+  @apply --dp__4;
   text-align: center;
-  margin: * .5em 1.5em;
+  margin: * * 1.5em *;
 
   & figure {
     @mixin flex column;
     margin: 0;
   }
+
   & img {
     max-width: 100%;
     height: auto;
     margin: 0;
   }
+
   & figcaption {
     background: var(--white);
     @mixin font-settings italic, 400, 1em, 1;
@@ -26,4 +35,5 @@
     margin: 0;
     padding: .2em;
   }
+
 }

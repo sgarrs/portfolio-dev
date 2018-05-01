@@ -12,7 +12,7 @@ function Paragraphs(props) {
           <p className='article__p' key={index}>
             {paragraph}
           </p>
-        )
+        );
       })}
     </div>
   )
@@ -35,7 +35,7 @@ class Article extends React.Component {
     }
   }
   componentDidMount() {
-    var article = document.getElementById('article');
+    const article = document.getElementById('article');
     PS.initialize(article, {
     });
   }

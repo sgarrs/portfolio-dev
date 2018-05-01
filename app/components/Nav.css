@@ -1,7 +1,7 @@
 @import '../styles/variables';
 
 .nav {
-  @apply --dp__12;
+  @apply --dp__4;
   background: var(--white);
   width: 100%;
   margin: * * 1em *;
@@ -21,7 +21,7 @@
   transition: all .2s ease-in-out;
 }
 .nav__item:hover {
-  @apply --dp__12;
+  @apply --dp__6;
 }
 .nav__item > i:hover, .nav__navigation > i:hover {
   color: var(--black);
@@ -42,7 +42,7 @@
 .menu {
   flex-grow: 2;
   @mixin flex;
-  @mixin font-settings normal, 300, 1.5em, 1;
+  @mixin font-settings normal, 300, 1.2em, 1;
 
   & .nav__navigation {
     @mixin flex;

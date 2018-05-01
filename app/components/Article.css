@@ -1,7 +1,7 @@
 @import '../styles/variables';
 
 .article {
-  @apply --dp__6;
+  @apply --dp__4;
   background: var(--white);
   flex-grow: 1;
   overflow: scroll;
@@ -10,11 +10,11 @@
   height: 100%;
   position: relative;
 
-
   & .article__header {
     @mixin font-settings normal, 700, 2em, 1;
     @apply --ot__display;
   }
+
   & .article__p {
     @mixin font-settings normal, 400, 1em, 1.4;
     @apply --ot__roman;
@@ -22,6 +22,7 @@
     word-break: normal;
     hyphens: auto;
   }
+
   & p:last-child {
     margin: * * 0 *;
   }

@@ -4,28 +4,35 @@ import Nav from './Nav';
 import Article from './Article';
 import Gallery from './Gallery';
 
+function ViewportLeft(props) {
+  return (
+    <div className='viewport--left'>
+        <Article />
+    </div>
+  );
+}
+
+function ViewportRight(props) {
+  return (
+    <div className='viewport--right'>
+      <Gallery />
+    </div>
+  );
+}
+
 class App extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      viewport: {
-        /* innerHeight seems to be too big? this solution is janky as fuck */
-        height: window.innerHeight - 16 + 'px'
-      }
     }
   }
 
   render() {
     return (
       <div className='container'>
-        <div className='viewport--left'>
-            <Nav />
-            <Article />
-        </div>
-        <div className='viewport--right'>
-          <Gallery />
-        </div>
+        <ViewportLeft />
+        <ViewportRight />
       </div>
     )
   }

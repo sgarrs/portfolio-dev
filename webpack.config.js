@@ -52,11 +52,6 @@ module.exports = {
           { loader: 'css-loader?modules', options: { importLoaders: 1 } },
           {
             loader: 'postcss-loader',
-            options: {
-              config: {
-                path: './postcss.config.js'
-              }
-            }
           }
         ]
       },
