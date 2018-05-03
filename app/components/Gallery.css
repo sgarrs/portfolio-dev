@@ -3,21 +3,26 @@
 .gallery {
   overflow: scroll;
   height: 100%;
+  position: relative;
+  padding: 2em 2em 2em .5em; /* must match .viewport--left padding */
 }
+
 .gallery__item {
-  @apply --dp__6;
   text-align: center;
-  margin: * .5em 1.5em;
+  @apply --dp__6;
+  margin: * * 1.5em *;
 
   & figure {
     @mixin flex column;
     margin: 0;
   }
+
   & img {
     max-width: 100%;
     height: auto;
     margin: 0;
   }
+
   & figcaption {
     background: var(--white);
     @mixin font-settings italic, 400, 1em, 1;
@@ -25,4 +30,9 @@
     margin: 0;
     padding: .2em;
   }
+
+}
+
+.gallery__item:last-child {
+  margin: * * 0 *;
 }

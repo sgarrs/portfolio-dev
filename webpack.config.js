@@ -52,11 +52,6 @@ module.exports = {
           { loader: 'css-loader?modules', options: { importLoaders: 1 } },
           {
             loader: 'postcss-loader',
-            options: {
-              config: {
-                path: './postcss.config.js'
-              }
-            }
           }
         ]
       },
@@ -74,6 +69,17 @@ module.exports = {
       },
 
       /* Files */
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ]
+      },
       {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'url-loader?limit=10000&mimetype=application/font-woff'

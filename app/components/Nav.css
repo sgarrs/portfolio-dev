@@ -1,12 +1,10 @@
 @import '../styles/variables';
 
 .nav {
-  @apply --dp__12;
-  background: var(--white);
-  width: 100%;
-  margin: * * 1em *;
   position: relative;
-  z-index: 3;
+  z-index: 5;
+  position: fixed;
+  top: 0;
 
   & ul {
     @mixin flex;
@@ -18,10 +16,6 @@
   padding: .5em;
   border-right: 1px solid black;
   color: var(--gray--40);
-  transition: all .2s ease-in-out;
-}
-.nav__item:hover {
-  @apply --dp__12;
 }
 .nav__item > i:hover, .nav__navigation > i:hover {
   color: var(--black);
@@ -34,6 +28,26 @@
 .logo {
   flex-grow: 0;
   @mixin font-settings normal, 300, 1em, 2;
+
+  & img {
+    border-radius: 50%;
+    width: 3em;
+    height: auto;
+    transition: all .1s ease-in-out;
+    @apply --dp__4;
+
+  }
+
+  & img:hover {
+    @apply --dp__12;
+    width: 3.2em;
+    cursor: pointer;
+  }
+
+  & img:active {
+    width: 3em;
+    @apply --dp__4;
+  }
 }
 .projects {
   flex-grow: 0;
@@ -42,7 +56,7 @@
 .menu {
   flex-grow: 2;
   @mixin flex;
-  @mixin font-settings normal, 300, 1.5em, 1;
+  @mixin font-settings normal, 300, 1.2em, 1;
 
   & .nav__navigation {
     @mixin flex;

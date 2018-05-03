@@ -1,5 +1,7 @@
 import React from 'react';
 import './Article.css';
+import '../styles/scrollbar.css';
+import PS from 'perfect-scrollbar';
 
 
 function Paragraphs(props) {
@@ -10,7 +12,7 @@ function Paragraphs(props) {
           <p className='article__p' key={index}>
             {paragraph}
           </p>
-        )
+        );
       })}
     </div>
   )
@@ -32,12 +34,19 @@ class Article extends React.Component {
       }
     }
   }
+  componentDidMount() {
+    const article = document.getElementById('article');
+    PS.initialize(article, {
+    });
+  }
   render() {
     return (
-      <article className='article'>
-        <h1 className='article__header'>{this.state.article.title}</h1>
-        <Paragraphs content={this.state.article.content} />
-      </article>
+      <div className="article__container">
+        <article className='article' id='article'>
+          <h1 className='article__header'>{this.state.article.title}</h1>
+          <Paragraphs content={this.state.article.content} />
+        </article>
+      </div>
     )
   }
 

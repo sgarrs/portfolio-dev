@@ -10,25 +10,38 @@
 }
 
 body {
-  background: var(--gray--60);
+  background: var(--green--60);
   color: var(--black);
 }
+
+.viewport__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--black);
+  z-index: 3;
+  transition: all .3s ease-in-out;
+}
+
 .container {
   height: 100vh;
   width: 100vw;
   position: relative;
   z-index: 0;
 }
+
 .viewport--left {
   @apply --viewport;
-  @mixin flex column;
   left: 0;
-  padding: 1em .5em 0 1em;
+  padding: 1em 1em 0 1em;
   z-index: 1;
 }
+
 .viewport--right {
   @apply --viewport;
+  @mixin flex column;
   right: 0;
-  padding: 1em .5em 0 0;
   z-index: 2;
 }
