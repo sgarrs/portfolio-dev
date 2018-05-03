@@ -2,6 +2,8 @@ import React from 'react';
 import './Gallery.css';
 import '../styles/scrollbar.css';
 import PS from 'perfect-scrollbar';
+import flyer from '../img/commercial-flyer_1-final.jpg';
+import sticker from '../img/caution-sticker-2.jpg';
 
 function Images(props) {
   return (
@@ -25,11 +27,13 @@ class Gallery extends React.Component {
     super(props);
     this.state = {
       sources: [
+        sticker,
+        flyer,
         'https://placekitten.com/500/800',
-        'https://placekitten.com/500/700',
         'https://placekitten.com/700/900'
       ],
       alt: [
+        '',
         'Front Page',
         '',
         'Back Page',

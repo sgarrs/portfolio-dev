@@ -1,9 +1,12 @@
 import React from 'react';
 import './Nav.css';
+import logo from '../img/logo.png';
 
 function NavLogo(props) {
   return (
-    <li className='nav__item logo'>Logo</li>
+    <li className='nav__item logo' onClick={props.onClick}>
+      <img src={logo} />
+    </li>
   );
 }
 
@@ -42,17 +45,24 @@ class Nav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      nextProject: 'Pella Marketing Brochure'
+      nextProject: 'Pella Marketing Brochure',
+      showBody: false
     }
   }
   render() {
+    const navBody = (
+      <div>
+        <NavProjectsLink />
+        <NavProjectsMenu nextProject={this.state.nextProject}/>
+        <NavSocial />
+      </div>
+    );
+
     return (
       <nav className='nav'>
         <ul>
-          <NavLogo />
-          <NavProjectsLink />
-          <NavProjectsMenu nextProject={this.state.nextProject}/>
-          <NavSocial />
+          <NavLogo onClick={this.props.onClick} />
+          {this.state.showBody ? navBody : ''}
         </ul>
       </nav>
     )

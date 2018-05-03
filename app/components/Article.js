@@ -41,10 +41,12 @@ class Article extends React.Component {
   }
   render() {
     return (
-      <article className='article' id='article'>
-        <h1 className='article__header'>{this.state.article.title}</h1>
-        <Paragraphs content={this.state.article.content} />
-      </article>
+      <div className="article__container">
+        <article className='article' id='article'>
+          <h1 className='article__header'>{this.state.article.title}</h1>
+          <Paragraphs content={this.state.article.content} />
+        </article>
+      </div>
     )
   }
 

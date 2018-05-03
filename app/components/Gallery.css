@@ -1,20 +1,15 @@
 @import '../styles/variables';
 
 .gallery {
-  @apply --dp__4;
   overflow: scroll;
-  margin: * * 1.5em *;
   height: 100%;
   position: relative;
-
-  & .gallery__item:last-child {
-    margin: * * 0 *;
-  }
+  padding: 2em 2em 2em .5em; /* must match .viewport--left padding */
 }
 
 .gallery__item {
-  @apply --dp__4;
   text-align: center;
+  @apply --dp__6;
   margin: * * 1.5em *;
 
   & figure {
@@ -36,4 +31,8 @@
     padding: .2em;
   }
 
+}
+
+.gallery__item:last-child {
+  margin: * * 0 *;
 }
