@@ -20,16 +20,26 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   context: path.resolve(__dirname, 'app'),
 
-  entry:[
-    'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
-    './index.js'
-  ],
+  entry: {
+    main: [
+      'react-hot-loader/patch',
+      'webpack-dev-server/client?http://localhost:8080',
+      'webpack/hot/only-dev-server',
+      './index.js'
+    ],
+    vendor: [
+      'react',
+      'react-dom',
+      'fontfaceobserver',
+      'normalize.css',
+      'perfect-scrollbar',
+      'postcss'
+    ]
+  },
 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].[hash].js',
     publicPath: '/'
   },
 
