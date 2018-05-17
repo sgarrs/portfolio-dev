@@ -1,54 +1,46 @@
 import React from 'react';
+import path from 'path';
 import './Gallery.css';
 import '../styles/scrollbar.css';
 import PS from 'perfect-scrollbar';
-import flyer from '../img/commercial-flyer_1-final.jpg';
-import sticker from '../img/caution-sticker-2.jpg';
-
-function Images(props) {
-  return (
-    <ul>
-      {props.sources.map(function(source, index) {
-        return (
-          <li className='gallery__item' key={index}>
-            <figure>
-              <img src={source} alt={props.alt[index]}/>
-              { props.alt[index] ? <figcaption>{props.alt[index]}</figcaption> : null }
-            </figure>
-          </li>
-        );
-      })}
-    </ul>
-  )
-}
 
 class Gallery extends React.Component {
   constructor(props) {
+  // state needs to handle the img path when routing is added
     super(props);
-    this.state = {
-      sources: [
-        sticker,
-        flyer,
-        'https://placekitten.com/500/800',
-        'https://placekitten.com/700/900'
-      ],
-      alt: [
-        '',
-        'Front Page',
-        '',
-        'Back Page',
-      ]
-    }
   }
+
   componentDidMount() {
     const gallery = document.getElementById('gallery');
-    PS.initialize(gallery, {
-    });
+    PS.initialize(gallery, {});
   }
   render() {
+    const GalleryImage = (props) => {
+      const source = require('../img/' + props.source);
+      return (
+        <figure>
+          <img src={source} alt={props.alt}/>
+          { props.alt ? <figcaption>{props.alt}</figcaption> : '' }
+        </figure>
+      );
+    };
+
+    const GalleryItems = (
+      <ul>
+        {this.props.images.map((img, index) => {
+          const key = `gallery__image--${index}`;
+          return (
+            <li className='gallery__item' key={key}>
+              <GalleryImage source={img.source} alt={img.alt} />
+            </li>
+          );
+        })}
+      </ul>
+    );
+
     return (
       <div className='gallery' id='gallery'>
-        <Images sources={this.state.sources} alt={this.state.alt} />
+        {GalleryItems}
       </div>
     )
   }

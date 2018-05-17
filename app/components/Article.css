@@ -12,6 +12,7 @@
   background: var(--white);
   margin: 1em .5em 2em 1em;
   padding: 1em 3em 1em 2em;
+  border: 1px solid var(--gray--40);
 
   & .article__header {
     @mixin font-settings normal, 700, 2em, 1;
@@ -28,5 +29,9 @@
 
   & p:last-child {
     margin: * * 0 *;
+  }
+
+  & .article__author {
+    @mixin font-settings italic, 400, 1em, 1;
   }
 }

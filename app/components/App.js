@@ -4,22 +4,8 @@ import Nav from './Nav';
 import Article from './Article';
 import Gallery from './Gallery';
 import Sidebar from './Sidebar';
+import images from '../data/images.json';
 
-function ViewportLeft(props) {
-  return (
-    <div className='viewport--left'>
-      <Article />
-    </div>
-  );
-}
-
-function ViewportRight(props) {
-  return (
-    <div className='viewport--right'>
-      <Gallery />
-    </div>
-  );
-}
 
 class App extends React.Component {
   constructor(props) {
@@ -30,24 +16,39 @@ class App extends React.Component {
   }
 
   render() {
+    const ViewportLeft = (
+      <div className='viewport--left'>
+        <Article />
+      </div>
+    );
+
+    const ViewportRight = (
+      <div className='viewport--right'>
+        <Gallery images={images} />
+      </div>
+    );
+
+    const ViewportOverlay = (
+      <div
+        className="viewport__overlay"
+        style={
+          {
+            opacity: this.state.sidebarVisible ? '.4' : '0',
+            pointerEvents: this.state.sidebarVisible ? 'auto' : 'none'
+          }
+        }
+      >
+      </div>
+    );
+
     return (
       <div>
-        <Nav
-          onClick={() => this.setState({sidebarVisible: !this.state.sidebarVisible})}
-        />
+        <Nav onClick={() => this.setState({sidebarVisible: !this.state.sidebarVisible})} />
         <Sidebar sidebarVisible={this.state.sidebarVisible} />
-        <div
-          className="viewport__overlay"
-          style={
-            {
-              opacity: this.state.sidebarVisible ? '.4' : '0',
-              pointerEvents: this.state.sidebarVisible ? 'auto' : 'none'
-            }
-          }
-        ></div>
+        {ViewportOverlay}
         <div className='container'>
-          <ViewportLeft />
-          <ViewportRight />
+          {ViewportLeft}
+          {ViewportRight}
         </div>
       </div>
     )
