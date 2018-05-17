@@ -30,4 +30,8 @@
   & p:last-child {
     margin: * * 0 *;
   }
+
+  & .article__author {
+    @mixin font-settings italic, 400, 1em, 1;
+  }
 }

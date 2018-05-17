@@ -6,6 +6,7 @@ import PS from 'perfect-scrollbar';
 
 class Gallery extends React.Component {
   constructor(props) {
+  // state needs to handle the img path when routing is added
     super(props);
   }
 
@@ -13,7 +14,6 @@ class Gallery extends React.Component {
     const gallery = document.getElementById('gallery');
     PS.initialize(gallery, {});
   }
-
   render() {
     const GalleryImage = (props) => {
       const source = require('../img/' + props.source);
