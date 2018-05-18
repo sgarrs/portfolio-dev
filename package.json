@@ -17,6 +17,7 @@
     "postcss": "^6.0.16",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
+    "react-images": "^0.5.17",
     "source-sans-pro": "git://github.com/adobe-fonts/source-sans-pro.git#release",
     "source-serif-pro": "git://github.com/adobe-fonts/source-serif-pro.git#release"
   },

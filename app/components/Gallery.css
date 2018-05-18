@@ -4,13 +4,14 @@
   overflow: scroll;
   height: 100%;
   position: relative;
-  padding: 2em 2em 2em .5em; /* must match .viewport--left padding */
+  padding: 2em 3em 2em 1.5em; /* must match .viewport--left padding */
 }
 
 .gallery__item {
   text-align: center;
   @apply --dp__6;
   margin: * * 1.5em *;
+  transition: all .1s ease-in-out;
 
   & figure {
     @mixin flex column;
@@ -31,6 +32,11 @@
     padding: .2em;
   }
 
+}
+.gallery__item:hover {
+  @apply --dp__12;
+  cursor: pointer;
+  transform: scale(1.02);
 }
 
 .gallery__item:last-child {
